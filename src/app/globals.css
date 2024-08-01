@@ -1,33 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Tailwind Base Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Custom Global Styles */
+@layer base {
+  body {
+    @apply font-montserrat bg-papaya-whip text-gunmetal;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-lora text-palatinate;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  a {
+    @apply text-myrtle-green hover:text-myrtle-green-light;
+  }
+
+  button {
+    @apply bg-myrtle-green text-white font-montserrat rounded p-2 hover:bg-myrtle-green-light transition duration-200;
+  }
+
+  input, textarea {
+    @apply border rounded p-2 font-hind;
   }
 }
