@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import ProtectedContent from "@/app/components/ComponentLock";
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Windrose Video Uploader | Free Marketing Content for NPOs',
@@ -31,6 +32,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+            <Script
+          async
+          strategy="beforeInteractive"
+          data-website-id="f01872f9-a742-4250-9f16-69736c147028"
+          src="https://umami-windrose.vercel.app/script.js"
+        />
       <ClerkProvider
         appearance={{
           variables: {
